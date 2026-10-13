@@ -1,0 +1,9 @@
+Pastikan app/Models/User.php mempunyai import berikut:
+use App\Models\SuratLamaran;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+Dan satu method ini di dalam class User (jangan duplikat):
+public function suratLamarans(): HasMany
+{
+    return $this->hasMany(SuratLamaran::class);
+}

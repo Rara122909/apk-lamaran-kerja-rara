@@ -1,0 +1,13 @@
+Tambahkan method berikut ke dalam class App\Models\User (di app/Models/User.php).
+Jangan menghapus method atau kode lain yang sudah ada.
+
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+public function suratLamarans(): HasMany
+{
+    return $this->hasMany(SuratLamaran::class);
+}
+
+Pastikan di bagian atas file ada:
+use App\Models\SuratLamaran;
+use Illuminate\Database\Eloquent\Relations\HasMany;
